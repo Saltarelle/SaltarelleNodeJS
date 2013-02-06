@@ -37,7 +37,7 @@ Task Build-NuGetPackages -Depends Determine-Version, Build-Solution {
 @"
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
-		<id>Saltarelle.NodeJS</id>
+		<id>Saltarelle.Node</id>
 		<version>$script:Version</version>
 		<title>Metadata required to use Node.js with the Saltarelle C# to JavaScript compiler</title>
 		<description>This package contains the required metadata to use Node.JS with the Saltarelle C# to JavaScript compiler.</description>
@@ -56,9 +56,9 @@ Task Build-NuGetPackages -Depends Determine-Version, Build-Solution {
 		<file src="$baseDir\NodeJS\bin\Saltarelle.NodeJS.xml" target="lib"/>
 	</files>
 </package>
-"@ | Out-File -Encoding UTF8 "$outDir\NodeJS.nuspec"
+"@ | Out-File -Encoding UTF8 "$outDir\Node.nuspec"
 
-	Exec { & "$buildtoolsDir\nuget.exe" pack "$outDir\NodeJS.nuspec" -NoPackageAnalysis -OutputDirectory "$outDir" }
+	Exec { & "$buildtoolsDir\nuget.exe" pack "$outDir\Node.nuspec" -NoPackageAnalysis -OutputDirectory "$outDir" }
 }
 
 Task Build -Depends Build-NuGetPackages {
