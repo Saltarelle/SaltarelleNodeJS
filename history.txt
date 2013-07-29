@@ -1,2 +1,6 @@
+0.8.1
+Use assembly version x.0.0.0 in order to get less dependency versioning problems.
+Works with compiler and runtime to 2.3.0
+
 0.8.0
 Initial version
