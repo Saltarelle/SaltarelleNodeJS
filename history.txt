@@ -1,2 +1,4 @@
+Works with compiler and runtime to 2.3.0
+
 0.8.0
 Initial version
