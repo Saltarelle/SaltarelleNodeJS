@@ -30,7 +30,7 @@ namespace NodeJS.OSModule {
 
 		public static CpuInfo[] Cpus { [ScriptName("cpus")] get { return null; } }
 
-		public static NetworkInterfaceInfo[] NetworkInterfaces { [ScriptName("networkInterfaces")] get { return null; } }
+		public static JsDictionary<string, NetworkInterfaceInfo[]> NetworkInterfaces { [ScriptName("networkInterfaces")] get { return null; } }
 
 		[IntrinsicProperty]
 		public static string Eol { get { return null; } }
